@@ -1,7 +1,7 @@
 import path from 'path';
 import type { Configuration } from "webpack";
-import { buildWebpack } from './config/build/buildWebpack';
-import { TyBuildMode } from './config/build/types/types';
+import buildWebpack from './config';
+import { TyBuildMode } from './config/types';
 
 type TyEnvVariables = {
     mode: TyBuildMode;

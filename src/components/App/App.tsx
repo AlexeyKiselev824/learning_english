@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import classes from './App.module.scss';
-import image from '@/assets/image.jpg';
-import IconSvg from '@/assets/icon.svg';
+import image from 'src/assets/image.jpg';
+import IconSvg from 'src/assets/icon.svg';
 
 const App = () => {
-    const [count, setCounst] = useState(0);
+    const [count, setCounst] = useState<number>(0);
 
     return (
         <div data-testid="TestForPlugin">

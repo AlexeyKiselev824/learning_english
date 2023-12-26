@@ -1,11 +1,13 @@
 import { Configuration } from "webpack";
-import { buildDevServer } from "./buildDevServer";
-import { buildLoaders } from "./buildLoaders";
-import { buildPlugins } from "./buildPlugins";
-import { buildResolvers } from "./buildResolvers";
-import { TyBuildOptions } from "./types/types";
+import {
+    buildDevServer,
+    buildLoaders,
+    buildPlugins,
+    buildResolvers
+} from "./build";
+import { TyBuildOptions } from "./types";
 
-export function buildWebpack(options: TyBuildOptions): Configuration {
+export default function buildWebpack(options: TyBuildOptions): Configuration {
     const { mode, paths } = options;
     const isDev = mode === 'development';
 
@@ -23,7 +25,8 @@ export function buildWebpack(options: TyBuildOptions): Configuration {
         },
         resolve: buildResolvers(options),
         // в devtool понятный код
-        devtool: isDev ? 'eval-cheap-source-map' : 'source-map',
+        // devtool: isDev ? 'eval-cheap-source-map' : 'source-map',
+        devtool: isDev && 'eval-cheap-source-map',
         devServer: isDev ? buildDevServer(options) : undefined,
     }
 }

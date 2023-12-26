@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack --env mode=development",
-    "build:prod": "webpack --env mode=production",
-    "start": "webpack serve --env port=5000 mode=development",
-    "checkts": "tsc"
+    "build": "webpack --env mode=production",
+    "build:analyzer": "webpack --env mode=production analyzer",
+    "start": "webpack serve --env port=3000 mode=development",
+    "checkts": "tsc --noEmit --skipLibCheck"
   },
   "keywords": [],
   "author": "",

@@ -12,6 +12,9 @@ export function buildLoaders({ mode }: TyBuildOptions): ModuleOptions['rules'] {
     const assetLoader = {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+            filename: 'assets/[name].[hash][ext][query]',
+        }
     };
 
     const svgrLoader = {

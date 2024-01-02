@@ -3,7 +3,7 @@ import { TyBuildOptions } from "../types";
 
 export function buildDevServer({ port }: TyBuildOptions): DevServerConfiguration {
     return {
-        port: port ?? 5001,
+        port: port ?? 3001,
         open: true,
         //  Если раздавать статику через nginx то надо делать проксирование на index.html
         historyApiFallback: true,

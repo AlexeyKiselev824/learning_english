@@ -32,11 +32,12 @@ module.exports = {
     },
     plugins: ['@typescript-eslint', 'react', 'prettier'],
     rules: {
-        'prettier/prettier': 'error',
-        indent: ['warn', 4],
-        'linebreak-style': ['error', 'unix'],
+        indent: ['error', 4],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
+        'prettier/prettier': 'error',
+        'react/react-in-jsx-scope': 'off',
+        'linebreak-style': ['error', 'unix'],
         'object-curly-newline': [
             'error',
             {

@@ -1,5 +1,5 @@
 import path from 'path';
-import type { Configuration } from "webpack";
+import type { Configuration } from 'webpack';
 import buildWebpack from './config';
 import { TyBuildMode } from './config/types';
 
@@ -7,7 +7,7 @@ type TyEnvVariables = {
     mode: TyBuildMode;
     port: number;
     analyzer?: boolean;
-}
+};
 
 export default (env: TyEnvVariables) => {
     const paths = {

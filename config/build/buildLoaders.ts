@@ -1,10 +1,12 @@
-import { ModuleOptions } from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ReactRefreshTypeScript from "react-refresh-typescript";
-import createTransformer from "./customPlugins/createTransformer";
-import { TyBuildOptions } from "../types";
+import { ModuleOptions } from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ReactRefreshTypeScript from 'react-refresh-typescript';
+import createTransformer from './customPlugins/createTransformer';
+import { TyBuildOptions } from '../types';
 
-const removeDataTestIdTransformer = createTransformer({ props: ['data-testid'] });
+const removeDataTestIdTransformer = createTransformer({
+    props: ['data-testid'],
+});
 
 export function buildLoaders({ mode }: TyBuildOptions): ModuleOptions['rules'] {
     const isDev = mode === 'development';
@@ -14,7 +16,7 @@ export function buildLoaders({ mode }: TyBuildOptions): ModuleOptions['rules'] {
         type: 'asset/resource',
         generator: {
             filename: 'assets/[name].[hash][ext][query]',
-        }
+        },
     };
 
     const svgrLoader = {
@@ -31,20 +33,22 @@ export function buildLoaders({ mode }: TyBuildOptions): ModuleOptions['rules'] {
                                 name: 'convertColors',
                                 params: {
                                     currentColor: true,
-                                }
-                            }
-                        ]
-                    }
-                }
-            }
+                                },
+                            },
+                        ],
+                    },
+                },
+            },
         ],
     };
 
     const cssLoaderModules = {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
             modules: {
-                localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]'
+                localIdentName: isDev
+                    ? '[path][name]__[local]'
+                    : '[hash:base64:8]',
             },
         },
     };
@@ -56,7 +60,7 @@ export function buildLoaders({ mode }: TyBuildOptions): ModuleOptions['rules'] {
             // Translates CSS into CommonJS
             cssLoaderModules,
             // Compiles Sass to CSS
-            "sass-loader",
+            'sass-loader',
         ],
     };
 
@@ -73,17 +77,12 @@ export function buildLoaders({ mode }: TyBuildOptions): ModuleOptions['rules'] {
                             !isDev && removeDataTestIdTransformer,
                         ].filter(Boolean),
                     }),
-                    transpileOnly: isDev
-                }
-            }
+                    transpileOnly: isDev,
+                },
+            },
         ],
         exclude: /node_modules/,
     };
 
-    return [
-        assetLoader,
-        svgrLoader,
-        cssLoader,
-        tsLoader,
-    ];
+    return [assetLoader, svgrLoader, cssLoader, tsLoader];
 }

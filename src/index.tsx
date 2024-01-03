@@ -6,26 +6,32 @@ import { LazyAbout } from 'src/pages/about/About.lazy';
 import { Shop } from 'src/pages/shop';
 
 const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement,
 );
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: '/',
         element: <App />,
         children: [
             {
                 path: '/about',
-                element: <Suspense fallback={'Loading...'}><LazyAbout /></Suspense>
+                element: (
+                    <Suspense fallback={'Loading...'}>
+                        <LazyAbout />
+                    </Suspense>
+                ),
             },
             {
                 path: '/shop',
-                element: <Suspense fallback={'Loading...'}><Shop /></Suspense>
+                element: (
+                    <Suspense fallback={'Loading...'}>
+                        <Shop />
+                    </Suspense>
+                ),
             },
-        ]
+        ],
     },
-])
+]);
 
-root.render(
-    <RouterProvider router={router} />
-);
+root.render(<RouterProvider router={router} />);

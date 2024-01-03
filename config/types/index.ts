@@ -6,11 +6,11 @@ export type TyBuildPaths = {
     output: string;
     public: string;
     src: string;
-}
+};
 
 export type TyBuildOptions = {
     port: number;
     paths: TyBuildPaths;
     mode: TyBuildMode;
     analyzer?: boolean;
-}
+};

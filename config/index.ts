@@ -1,11 +1,11 @@
-import { Configuration } from "webpack";
+import { Configuration } from 'webpack';
 import {
     buildDevServer,
     buildLoaders,
     buildPlugins,
-    buildResolvers
-} from "./build";
-import { TyBuildOptions } from "./types";
+    buildResolvers,
+} from './build';
+import { TyBuildOptions } from './types';
 
 export default function buildWebpack(options: TyBuildOptions): Configuration {
     const { mode, paths } = options;
@@ -29,5 +29,5 @@ export default function buildWebpack(options: TyBuildOptions): Configuration {
         // devtool: isDev ? 'eval-cheap-source-map' : 'source-map',
         devtool: isDev && 'eval-cheap-source-map',
         devServer: isDev ? buildDevServer(options) : undefined,
-    }
+    };
 }

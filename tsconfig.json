@@ -10,9 +10,7 @@
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "paths": {
-            "src/*": [
-                "./src/*"
-            ]
+            "src/*": ["./src/*"]
         }
     },
     "ts-node": {
@@ -20,7 +18,5 @@
             "module": "CommonJS"
         }
     },
-    "exclude": [
-        "node_modules"
-    ]
+    "exclude": ["node_modules"]
 }

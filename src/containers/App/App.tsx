@@ -9,7 +9,7 @@ const App = () => {
 
     return (
         <div data-testid="TestForPlugin">
-            {__DEV__ && <div>DEV режим!</div>}
+            {__DEV__ && <h1>DEV режим!</h1>}
             <div>
                 <img src={image} width="200px" height="220px" alt="" />
             </div>

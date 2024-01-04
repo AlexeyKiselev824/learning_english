@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import App from 'src/components/App/App';
+import App from 'src/containers/App/App';
 import { LazyAbout } from 'src/pages/about/About.lazy';
 import { Shop } from 'src/pages/shop';
 

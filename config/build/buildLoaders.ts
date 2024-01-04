@@ -2,6 +2,8 @@ import { ModuleOptions } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshTypeScript from 'react-refresh-typescript';
 import createTransformer from './customPlugins/createTransformer';
+import postcssPresetEnv from 'postcss-preset-env';
+import postcssNormalize from 'postcss-normalize';
 import { TyBuildOptions } from '../types';
 
 const removeDataTestIdTransformer = createTransformer({
@@ -59,6 +61,21 @@ export function buildLoaders({ mode }: TyBuildOptions): ModuleOptions['rules'] {
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             // Translates CSS into CommonJS
             cssLoaderModules,
+            // normolize and support last version browsers
+            {
+                loader: 'postcss-loader',
+                options: {
+                    postcssOptions: {
+                        plugins: [
+                            postcssPresetEnv({
+                                stage: 2,
+                                browsers: 'last 2 versions',
+                            }),
+                            postcssNormalize({ forceImport: true }),
+                        ],
+                    },
+                },
+            },
             // Compiles Sass to CSS
             'sass-loader',
         ],

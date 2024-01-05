@@ -12,7 +12,8 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:react/recommended',
-        'prettier',
+        'plugin:prettier/recommended',
+        // 'prettier',
     ],
     overrides: [
         {
@@ -35,34 +36,13 @@ module.exports = {
         indent: ['error', 4],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
-        'prettier/prettier': 'error',
-        'react/react-in-jsx-scope': 'off',
-        'linebreak-style': ['error', 'unix'],
-        'object-curly-newline': [
-            'error',
+        'prettier/prettier': [
+            'warn',
             {
-                ObjectExpression: {
-                    minProperties: 4,
-                    multiline: true,
-                    consistent: true,
-                },
-                ObjectPattern: {
-                    minProperties: 4,
-                    multiline: true,
-                    consistent: true,
-                },
-                ImportDeclaration: {
-                    minProperties: 4,
-                    multiline: true,
-                    consistent: true,
-                },
-                ExportDeclaration: {
-                    minProperties: 4,
-                    multiline: true,
-                    consistent: true,
-                },
+                endOfLine: 'auto',
             },
         ],
-        // 'array-bracket-newline': ['error', { minItems: 4 }],
+        'react/react-in-jsx-scope': 'off',
+        'linebreak-style': ['error', 'unix'],
     },
 };

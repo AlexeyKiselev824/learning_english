@@ -1,10 +1,5 @@
 import { Configuration } from 'webpack';
-import {
-    buildDevServer,
-    buildLoaders,
-    buildPlugins,
-    buildResolvers,
-} from './build';
+import { buildDevServer, buildLoaders, buildPlugins, buildResolvers } from './build';
 import { TyBuildOptions } from './types';
 
 export default function buildWebpack(options: TyBuildOptions): Configuration {

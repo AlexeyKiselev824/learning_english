@@ -6,11 +6,7 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { TyBuildOptions } from '../types';
 
-export function buildPlugins({
-    mode,
-    paths,
-    analyzer,
-}: TyBuildOptions): Configuration['plugins'] {
+export function buildPlugins({ mode, paths, analyzer }: TyBuildOptions): Configuration['plugins'] {
     const isDev = mode === 'development';
 
     const plugins: Configuration['plugins'] = [

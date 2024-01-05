@@ -1,0 +1,90 @@
+@import './scss/defaultVar.scss';
+@import './scss/mixin.scss';
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+// Общие параметры ---------------------------------------------
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    color: $mainColorFont;
+    font-weight: $mainFontWeight;
+    font-family: $fontFamily, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:global {
+    #root {
+        height: 100%;
+        margin: 0 auto;
+        max-width: rem($maxWidth);
+        min-width: rem($minWidth);
+    }
+
+    //---------------Wrapper----------------------------------------
+
+    .App {
+        min-height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        font-size: $fontSize;
+    }
+
+    // техническиe классы -------------------------------------------
+    ._container {
+        max-width: rem($maxWidthContainer);
+        padding: 0 rem($containerPadding);
+        margin: 0px auto;
+        box-sizing: content-box;
+    }
+
+    ._main {
+        flex: 1 1 auto;
+    }
+}

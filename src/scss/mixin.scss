@@ -1,0 +1,87 @@
+@use 'sass:math';
+
+$fz: 16;
+
+@function rem($size) {
+    @return math.div($size, $fz) * 1rem;
+}
+
+@function em($size) {
+    @return math.div($size, $fz) * 1em;
+}
+
+// Настройки (дублируем из глобальных переменных) -----------------------------------------------------
+
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1600;
+// Ширина ограничивающего контейнера
+$maxWidthContainer: 900;
+// Общий отступ у контейнера
+// (15px слева и спрва)
+$containerPadding: 15;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + ($containerPadding * 2);
+
+// // Брейк-поинты
+$pc: em($containerWidth); // ПК
+$tablet: em(991.98); // Планшеты
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+// @mixin adaptiveValue(
+//     $property,
+//     $startSize,
+//     $minSize,
+//     $widthFrom: $containerWidth,
+//     $widthTo: $minWidth,
+//     $keepSize: 0
+// ) {
+//     @if ($widthFrom ==$containerWidth and $maxWidthContainer ==0) {
+//         $widthFrom: $maxWidth;
+//     }
+
+//     @if ($minSize <=0) {
+//         $minSize: 0.0001;
+//     }
+
+//     @if ($startSize <=0) {
+//         $startSize: 0.0001;
+//     }
+
+//     // Брейк-поинты в EM
+//     $widthFromMedia: em($widthFrom);
+//     $widthToMedia: em($widthTo);
+
+//     // Формула плавающего значения
+//     // Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+//     $slope: ($startSize - $minSize) / ($widthFrom - $widthTo);
+//     $yIntersection: -$widthTo * $slope + $minSize;
+//     $flyValue: #{rem($yIntersection)}' + ' #{$slope * 100}vw;
+
+//     // Получение значения свойства
+//     $propertyValue: #{'clamp(' rem($minSize) ',' $flyValue ',' rem($startSize) ')'};
+
+//     // Если отрицательные значения
+//     @if ($minSize > $startSize) {
+//         $propertyValue: #{'clamp(' rem($startSize) ',' $flyValue ',' rem($minSize) ')'};
+//     }
+
+//     @if $widthFrom ==$containerWidth or $widthFrom ==$maxWidth or $keepSize ==1 or $keepSize ==2 {
+//         @media (min-width: $widthFromMedia) {
+//             #{$property}: rem($startSize);
+//         }
+//     }
+
+//     @media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+//         #{$property}: $propertyValue;
+//     }
+
+//     @if $widthTo ==$minWidth or $keepSize ==1 or $keepSize ==3 {
+//         @media (max-width: $widthToMedia) {
+//             #{$property}: rem($minSize);
+//         }
+//     }
+// }

@@ -31,9 +31,9 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['@typescript-eslint', 'react', 'prettier'],
+    plugins: ['@typescript-eslint', 'react', 'prettier', 'import'],
     rules: {
-        indent: ['error', 4],
+        indent: ['warn', 4],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
         'prettier/prettier': [
@@ -44,5 +44,27 @@ module.exports = {
         ],
         'react/react-in-jsx-scope': 'off',
         'linebreak-style': ['error', 'unix'],
+        'no-var': 'error',
+        'prefer-const': 'warn',
+        'no-console': 'warn',
+        'jsx-quotes': ['error', 'prefer-double'],
+        'max-len': ['error', { code: 100 }],
+        'comma-dangle': ['error', 'always-multiline'],
+        'import/order': [
+            'error',
+            {
+                // groups: ['index', 'sibling', 'parent', 'internal', 'external', 'builtin'],
+                groups: ['builtin', 'external', 'internal', 'sibling', 'index', 'object', 'parent'],
+                pathGroups: [
+                    {
+                        pattern: '**/types',
+                        group: 'parent',
+                        position: 'after',
+                    },
+                ],
+                pathGroupsExcludedImportTypes: ['builtin'],
+                'newlines-between': 'never',
+            },
+        ],
     },
 };

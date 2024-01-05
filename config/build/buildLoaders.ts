@@ -1,9 +1,9 @@
 import { ModuleOptions } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshTypeScript from 'react-refresh-typescript';
-import createTransformer from './customPlugins/createTransformer';
 import postcssPresetEnv from 'postcss-preset-env';
 import postcssNormalize from 'postcss-normalize';
+import createTransformer from './customPlugins/createTransformer';
 import { TyBuildOptions } from '../types';
 
 const removeDataTestIdTransformer = createTransformer({

@@ -6,7 +6,8 @@ export default function createTransformer(options: {
     return (context: ts.TransformationContext) => {
         return (sourceFile: ts.SourceFile): ts.SourceFile => {
             function visit(node: ts.Node): ts.VisitResult<ts.Node> | undefined {
-                // Проверка, что узел является JSX атрибутом и его имя является идентификатором, который включен в список удаляемых атрибутов
+                // Проверка, что узел является JSX атрибутом и его имя является идентификатором,
+                // который включен в список удаляемых атрибутов
                 if (
                     ts.isJsxAttribute(node) &&
                     ts.isIdentifier(node.name) &&

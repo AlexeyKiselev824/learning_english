@@ -1,9 +1,9 @@
-import Main from './Main';
 import { Suspense } from 'react';
 import { Navigate, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import { About } from './About';
-import { Shop } from './Shop';
 import Home from 'src/containers/Home';
+import { Shop } from './Shop';
+import { About } from './About';
+import Main from './Main';
 
 export const AppRouter = createBrowserRouter(
     createRoutesFromElements(

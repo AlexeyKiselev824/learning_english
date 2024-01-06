@@ -1,0 +1,22 @@
+@import 'src/scss/defaultVar.scss';
+@import 'src/scss/mixin.scss';
+
+.header {
+    background-color: $mainDarkColor;
+    color: white;
+    padding: rem(10) 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    min-height: rem(50);
+}
+
+.navbar {
+    margin-left: auto;
+}
+
+.devlink {
+}

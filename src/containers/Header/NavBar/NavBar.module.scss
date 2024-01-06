@@ -1,0 +1,12 @@
+@import 'src/scss/mixin.scss';
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(10);
+}
+
+.link {
+    font-size: rem(16);
+    line-height: calc(20 / 16);
+}

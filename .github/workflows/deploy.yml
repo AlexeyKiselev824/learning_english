@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - rc  # Автоматически запускается на push в ветку rc
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        persist-credentials: false
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build  # Запускает скрипт сборки
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        branch: gh-pages  # Ветка для GitHub Pages
+        folder: dist      # Папка, куда Webpack помещает собранные файлы
+        token: ${{ secrets.GITHUB_TOKEN }}  # Токен доступа

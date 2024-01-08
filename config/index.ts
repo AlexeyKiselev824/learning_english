@@ -11,6 +11,7 @@ export default function buildWebpack(options: TyBuildOptions): Configuration {
         entry: paths.entry,
         output: {
             path: paths.output,
+            publicPath: '/learning_english',
             filename: 'js/[name].[contenthash].js',
             chunkFilename: 'js/chunk/[name].[contenthash].js',
             clean: true,

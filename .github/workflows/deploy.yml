@@ -36,4 +36,4 @@ jobs:
       with:
         branch: gh-pages  # Ветка для GitHub Pages
         folder: dist      # Папка, куда Webpack помещает собранные файлы
-        token: ${{ secrets.GITHUB_TOKEN }}  # Токен доступа
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  # Токен доступа

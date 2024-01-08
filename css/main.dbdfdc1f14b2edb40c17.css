@@ -1,0 +1,507 @@
+/* Document
+ * ========================================================================== *//**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */:where(html) {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+       text-size-adjust: 100%; /* 2 */
+}/* Sections
+ * ========================================================================== *//**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ */:where(h1) {
+  font-size: 2em;
+  margin-bottom: 0.67em;
+  margin-top: 0.67em;
+}/* Grouping content
+ * ========================================================================== *//**
+ * Remove the margin on nested lists in Chrome, Edge, and Safari.
+ */:where(dl, ol, ul) :where(dl, ol, ul) {
+  margin-bottom: 0;
+  margin-top: 0;
+}/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Correct the inheritance of border color in Firefox.
+ */:where(hr) {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
+  color: inherit; /* 2 */
+  height: 0; /* 1 */
+}/* Text-level semantics
+ * ========================================================================== *//**
+ * Add the correct text decoration in Safari.
+ */:where(abbr[title]) {
+  text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */:where(b, strong) {
+  font-weight: bolder;
+}/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */:where(code, kbd, pre, samp) {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}/**
+ * Add the correct font size in all browsers.
+ */:where(small) {
+  font-size: 80%;
+}/* Tabular data
+ * ========================================================================== *//**
+ * 1. Correct table border color in Chrome, Edge, and Safari.
+ * 2. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */:where(table) {
+  border-color: currentColor; /* 1 */
+  text-indent: 0; /* 2 */
+}/* Forms
+ * ========================================================================== *//**
+ * Remove the margin on controls in Safari.
+ */:where(button, input, select) {
+  margin: 0;
+}/**
+ * Remove the inheritance of text transform in Firefox.
+ */:where(button) {
+  text-transform: none;
+}/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */:where(button, input[type="button" i]) {
+  -webkit-appearance: button;
+}:where(button, input[type="reset" i]) {
+  -webkit-appearance: button;
+}:where(button, input[type="submit" i]) {
+  -webkit-appearance: button;
+}/**
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */:where(progress) {
+  vertical-align: baseline;
+}/**
+ * Remove the inheritance of text transform in Firefox.
+ */:where(select) {
+  text-transform: none;
+}/**
+ * Remove the margin in Firefox and Safari.
+ */:where(textarea) {
+  margin: 0;
+}/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */:where(input[type="search" i]) {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */::-webkit-search-decoration {
+  -webkit-appearance: none;
+}/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}/**
+ * Remove the inner border and padding of focus outlines in Firefox.
+ */:where(button, input[type="button" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}:where(button, input[type="color" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}:where(button, input[type="reset" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}:where(button, input[type="submit" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}/**
+ * Restore the focus outline styles unset by the previous rule in Firefox.
+ */:where(button, input[type="button" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}:where(button, input[type="color" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}:where(button, input[type="reset" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}:where(button, input[type="submit" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}/**
+ * Remove the additional :invalid styles in Firefox.
+ */:where(:-moz-ui-invalid) {
+  box-shadow: none;
+}/* Interactive
+ * ========================================================================== *//*
+ * Add the correct styles in Safari.
+ */:where(dialog) {
+  background-color: white;
+  border: solid;
+  color: black;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}:where(dialog:not([open])) {
+  display: none;
+}/*
+ * Add the correct display in all browsers.
+ */:where(summary) {
+  display: list-item;
+}.Xq6hFSV1{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;gap:.625rem}.HdQHQGfQ{font-size:1rem;line-height:1.25}
+/* Document
+ * ========================================================================== *//**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */:where(html) {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+       text-size-adjust: 100%; /* 2 */
+}/* Sections
+ * ========================================================================== *//**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ */:where(h1) {
+  font-size: 2em;
+  margin-bottom: 0.67em;
+  margin-top: 0.67em;
+}/* Grouping content
+ * ========================================================================== *//**
+ * Remove the margin on nested lists in Chrome, Edge, and Safari.
+ */:where(dl, ol, ul) :where(dl, ol, ul) {
+  margin-bottom: 0;
+  margin-top: 0;
+}/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Correct the inheritance of border color in Firefox.
+ */:where(hr) {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
+  color: inherit; /* 2 */
+  height: 0; /* 1 */
+}/* Text-level semantics
+ * ========================================================================== *//**
+ * Add the correct text decoration in Safari.
+ */:where(abbr[title]) {
+  text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */:where(b, strong) {
+  font-weight: bolder;
+}/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */:where(code, kbd, pre, samp) {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}/**
+ * Add the correct font size in all browsers.
+ */:where(small) {
+  font-size: 80%;
+}/* Tabular data
+ * ========================================================================== *//**
+ * 1. Correct table border color in Chrome, Edge, and Safari.
+ * 2. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */:where(table) {
+  border-color: currentColor; /* 1 */
+  text-indent: 0; /* 2 */
+}/* Forms
+ * ========================================================================== *//**
+ * Remove the margin on controls in Safari.
+ */:where(button, input, select) {
+  margin: 0;
+}/**
+ * Remove the inheritance of text transform in Firefox.
+ */:where(button) {
+  text-transform: none;
+}/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */:where(button, input[type="button" i]) {
+  -webkit-appearance: button;
+}:where(button, input[type="reset" i]) {
+  -webkit-appearance: button;
+}:where(button, input[type="submit" i]) {
+  -webkit-appearance: button;
+}/**
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */:where(progress) {
+  vertical-align: baseline;
+}/**
+ * Remove the inheritance of text transform in Firefox.
+ */:where(select) {
+  text-transform: none;
+}/**
+ * Remove the margin in Firefox and Safari.
+ */:where(textarea) {
+  margin: 0;
+}/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */:where(input[type="search" i]) {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */::-webkit-search-decoration {
+  -webkit-appearance: none;
+}/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}/**
+ * Remove the inner border and padding of focus outlines in Firefox.
+ */:where(button, input[type="button" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}:where(button, input[type="color" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}:where(button, input[type="reset" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}:where(button, input[type="submit" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}/**
+ * Restore the focus outline styles unset by the previous rule in Firefox.
+ */:where(button, input[type="button" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}:where(button, input[type="color" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}:where(button, input[type="reset" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}:where(button, input[type="submit" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}/**
+ * Remove the additional :invalid styles in Firefox.
+ */:where(:-moz-ui-invalid) {
+  box-shadow: none;
+}/* Interactive
+ * ========================================================================== *//*
+ * Add the correct styles in Safari.
+ */:where(dialog) {
+  background-color: white;
+  border: solid;
+  color: black;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}:where(dialog:not([open])) {
+  display: none;
+}/*
+ * Add the correct display in all browsers.
+ */:where(summary) {
+  display: list-item;
+}.D9aHg4ty{background-color:#141414;color:#fff;padding:.625rem 0}.KQ_Eyr3V{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1.25rem;min-height:3.125rem}.Nc9dB5_i{margin-left:auto}
+/* Document
+ * ========================================================================== *//**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */:where(html) {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+       text-size-adjust: 100%; /* 2 */
+}/* Sections
+ * ========================================================================== *//**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ */:where(h1) {
+  font-size: 2em;
+  margin-bottom: 0.67em;
+  margin-top: 0.67em;
+}/* Grouping content
+ * ========================================================================== *//**
+ * Remove the margin on nested lists in Chrome, Edge, and Safari.
+ */:where(dl, ol, ul) :where(dl, ol, ul) {
+  margin-bottom: 0;
+  margin-top: 0;
+}/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Correct the inheritance of border color in Firefox.
+ */:where(hr) {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
+  color: inherit; /* 2 */
+  height: 0; /* 1 */
+}/* Text-level semantics
+ * ========================================================================== *//**
+ * Add the correct text decoration in Safari.
+ */:where(abbr[title]) {
+  text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */:where(b, strong) {
+  font-weight: bolder;
+}/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */:where(code, kbd, pre, samp) {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}/**
+ * Add the correct font size in all browsers.
+ */:where(small) {
+  font-size: 80%;
+}/* Tabular data
+ * ========================================================================== *//**
+ * 1. Correct table border color in Chrome, Edge, and Safari.
+ * 2. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */:where(table) {
+  border-color: currentColor; /* 1 */
+  text-indent: 0; /* 2 */
+}/* Forms
+ * ========================================================================== *//**
+ * Remove the margin on controls in Safari.
+ */:where(button, input, select) {
+  margin: 0;
+}/**
+ * Remove the inheritance of text transform in Firefox.
+ */:where(button) {
+  text-transform: none;
+}/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */:where(button, input[type="button" i]) {
+  -webkit-appearance: button;
+}:where(button, input[type="reset" i]) {
+  -webkit-appearance: button;
+}:where(button, input[type="submit" i]) {
+  -webkit-appearance: button;
+}/**
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */:where(progress) {
+  vertical-align: baseline;
+}/**
+ * Remove the inheritance of text transform in Firefox.
+ */:where(select) {
+  text-transform: none;
+}/**
+ * Remove the margin in Firefox and Safari.
+ */:where(textarea) {
+  margin: 0;
+}/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */:where(input[type="search" i]) {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */::-webkit-search-decoration {
+  -webkit-appearance: none;
+}/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}/**
+ * Remove the inner border and padding of focus outlines in Firefox.
+ */:where(button, input[type="button" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}:where(button, input[type="color" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}:where(button, input[type="reset" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}:where(button, input[type="submit" i])::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}/**
+ * Restore the focus outline styles unset by the previous rule in Firefox.
+ */:where(button, input[type="button" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}:where(button, input[type="color" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}:where(button, input[type="reset" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}:where(button, input[type="submit" i])::-moz-focusring {
+  outline: 1px dotted ButtonText;
+}/**
+ * Remove the additional :invalid styles in Firefox.
+ */:where(:-moz-ui-invalid) {
+  box-shadow: none;
+}/* Interactive
+ * ========================================================================== *//*
+ * Add the correct styles in Safari.
+ */:where(dialog) {
+  background-color: white;
+  border: solid;
+  color: black;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}:where(dialog:not([open])) {
+  display: none;
+}/*
+ * Add the correct display in all browsers.
+ */:where(summary) {
+  display: list-item;
+}input,button,textarea{font-family:inherit}button{cursor:pointer}button::-moz-focus-inner{padding:0;border:0}a,a:visited{-webkit-text-decoration:none;text-decoration:none;color:inherit}a:hover{-webkit-text-decoration:none;text-decoration:none}ul{margin:0;padding:0}ul li{list-style:none}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}html,body{height:100%;line-height:1;color:#000;font-weight:500;font-family:"Montserrat",sans-serif;margin:0;padding:0}#root{height:100%;margin:0 auto;max-width:100rem;min-width:20rem}.App{min-height:100%;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:1.125rem}._container{max-width:56.25rem;padding:0 .9375rem;margin:0px auto;-webkit-box-sizing:content-box;box-sizing:content-box}._main{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}
